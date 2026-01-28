@@ -20,6 +20,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - REMIX-4722: Refactored Stage Manager to use the new `ScrollingTreeWidget` component, decoupling scroll-frame logic for reuse
 - Excluded the python scripts from the package to avoid distributing binary files.
 - REMIX-4891: Migrated to ruff for formatting/linting, modernized codebase, and added pre-commit hooks.
+- Add `create_venv.bat` to create a virtual environment for development.
+- Tweaks for release notes
 
 ### Fixed
 - Added a frame wait for Stage Manager refresh to ensure all items are properly populated and updated Additional Filters menu sorting
@@ -546,7 +548,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - REMIX-3079: Fixed texture preview windows showing the incorrect texture
 - Fixed the hotkey test so that it can handle developer mode
 - Removed the USDC_USE_PREAD environment variable since it causes crashes for projects with many textures
-- REMIX-2825: Updated renderer to the latest dxvk-remix to accomodate USD distant light import/export fixes
+- REMIX-2825: Updated renderer to the latest dxvk-remix to accommodated USD distant light import/export fixes
 - Fixed highlight outline rendering if selecting non-power-of-two amount of objects
 - Fix trigger pipeline
 - Fix CI that crash because of a wrong ingested asset
@@ -705,7 +707,37 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - REMIX-1542 REMIX-1693: don't lose focus of widgets when modifying properties
 - REMIX-2419 REMIX-2736: Handle 'f' key press anywhere on layout or ingestion tab. Handle 'Ctrl+S', etc. key presses on all tabs
 - REMIX-2719: Choose the same GPU for DXVK, as the one in Hydra Engine
-- REMIX-2722: Adjust default light intensity (first pass. Will do more ajustements)
+- REMIX-2722: Adjust default light intensity (first pass. Will do more 
+improvements later)
+- REMIX-2730: Fix AI Tools crash when selecting a non-texture prim
+- REMIX-2733: Fix ingestion crash when ingesting a file with no extension
+- REMIX-2740: Fix material property widget not updating after changing edit target
+## [2024.2.0]
+### Added
+- REMIX-2466: Added AI Texture Tool to generate textures using AI models
+- REMIX-2465: Added AI Inpainting Tool to inpaint textures using AI models
+- REMIX-2464: Added AI Upscale Tool to upscale textures using AI models
+### Changed
+- REMIX-2480: Updated AI Tools tab to use new process executor
+- REMIX-2503: Updated AI Tools to use new texture set logic
+- REMIX-2519: Updated AI Tools to use new texture preview widget
+### Fixed
+- REMIX-2499: Fixed AI Tools texture preview not updating after changing texture set
+## [2024.2.0-RC.1]
+### Added
+- REMIX-2451: Added a new AI Tools tab to the Remix Toolkit
+### Changed
+- REMIX-2452: Updated the Ingestion tab to use the new process executor
+### Fixed
+- REMIX-2453: Fixed ingestion progress bar not updating correctly
+## [2024.1.1]
+### Added
+- REMIX-2343: Added telemetry for AI Tools usage
+### Changed
+- REMIX-2344: Updated AI Tools to use the latest PyTorch version
+### Fixed
+
+
 - REMIX-2642: Spelling / Wording / Grammar corrections in the Annotations for the Input File Path
 - REMIX-2654, REMIX-2661: AI Tools don't run on 20-series GPUs. AI Tools don't get cleaned out of memory after inference is done.
 - [HDRemix] Fix scale not affecting lights
